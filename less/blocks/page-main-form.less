@@ -1,0 +1,43 @@
+.page-main-form {
+    background-color: white;
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+    @media (max-width: @desktop-internal-width) {
+        max-width: 768px;
+    }
+    @media (max-width: @tablet-width) {
+        max-width: 320px;
+    }
+    &__wrap {
+        background-color: #f1f1f1;
+    }
+    &__title {
+        font-size: 53px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding-top: 50px;
+        padding-bottom: 105px;
+        @media (max-width: @desktop-internal-width) {
+            font-size: 42px;
+            padding-bottom: 70px;
+        }
+        @media (max-width: @tablet-width) {
+            font-size: 35px;
+            padding-top: 95px;
+            padding-bottom: 65px;
+        }
+    }
+    &__image {
+        min-height: 35px;
+        background-image: url(../img/zigzag-fill-desktop.svg);
+        background-size: 5%;
+        background-repeat: repeat-x;
+        background-position: bottom;
+        @media (max-width: @tablet-width) {
+            background-image: none;
+        }
+    }
+}

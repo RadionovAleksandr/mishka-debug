@@ -1,0 +1,99 @@
+.main-nav {
+    width: 440px;
+    margin-left: 100px;
+    order: -1;
+    &__toggle {
+        display: none;
+        @media (max-width: @tablet-width) {
+            position: absolute;
+            top: 28px;
+            right: 30px;
+            z-index: 2;
+            display: block;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            cursor: pointer;
+            border: none;
+        }
+        &--closed::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 2.5px;
+            width: 20px;
+            height: 2px;
+            background-color: #221f1f;
+            box-shadow: 0 8px 0 0 #221f1f, 0 16px 0 0 #221f1f;
+        }
+    }
+    &--internal {
+        margin-left: 50px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: @tablet-width) {}
+        &--top {
+            @media (max-width: @tablet-width) {
+                display: flex;
+                position: static;
+                order: 2;
+                margin: 0;
+                width: 100%;
+                max-width: 767px;
+                flex-direction: column;
+                align-content: center;
+            }
+        }
+    }
+    &--bottom {
+        @media (max-width: @desktop-width) {
+            display: none;
+        }
+    }
+    &--top {
+        @media (max-width: @desktop-width) {
+            position: absolute;
+            top: 89px;
+            margin-left: 60px;
+            width: 100%;
+        }
+        @media (max-width: @tablet-width) {
+            position: static;
+            order: 1;
+            margin-left: 0;
+            display: none;
+        }
+    }
+}
+
+/*Классы для добавления, при активном мобильном меню*/
+
+.main-nav {
+    &__toggle--active {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            left: 2.5px;
+            width: 20px;
+            height: 2px;
+            background-color: #221f1f;
+            transform: rotate(45deg)
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 12px;
+            left: 2.5px;
+            width: 20px;
+            height: 2px;
+            background-color: #221f1f;
+            transform: rotate(-45deg)
+        }
+    }
+    &--top-active {
+        display: flex;
+    }
+}

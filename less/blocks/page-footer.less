@@ -1,0 +1,113 @@
+.page-footer {
+    width: 100%;
+    max-width: 1250px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 70px;
+    background-color: #f1f1f1;
+    @media (max-width: @tablet-width) {
+        margin-top: 0px;
+    }
+    &--internal {
+        max-width: 1150px;
+    }
+    @media (max-width: @tablet-width) {
+        width: 100%;
+        flex-direction: column;
+    }
+    &__column {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        @media (max-width: @tablet-width) {
+            width: 260px;
+            margin: 0 auto;
+            margin-top: 23px;
+            padding-bottom: 27px;
+            display: flex;
+            justify-content: center;
+        }
+        &--left {
+            margin-left: 50px;
+            margin-right: auto;
+            @media (max-width: @tablet-width) {
+                display: none;
+            }
+        }
+        &--middle {
+            margin-left: 70px;
+            @media (max-width: @tablet-width) {
+                border-bottom: 2px solid #e5e5e5;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        &--right {
+            margin-right: 50px;
+            margin-left: auto;
+            @media (max-width: @tablet-width) {
+                border-bottom: 2px solid #e5e5e5;
+                margin-right: auto;
+            }
+        }
+    }
+    &__logo-img {
+        width: 102px;
+        height: 34px;
+        &:hover,
+        &:focus {
+            fill: #46c1ae;
+        }
+        &:active {
+            fill: #bde3dd;
+        }
+    }
+    &__social-img:hover,
+    &__social-img:focus {
+        fill: #46c1ae;
+    }
+    &__social-img:active {
+        fill: #bde3dd;
+    }
+    &__social-img--inst {
+        width: 22px;
+        height: 22px;
+    }
+    &__social-img--fb {
+        width: 15px;
+        height: 28px;
+        margin: 0 32px;
+    }
+    &__social-img--tw {
+        width: 24px;
+        height: 20px;
+    }
+    &__developer {
+        display: flex;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            fill: #46c1ae;
+        }
+        &:active {
+            fill: #bde3dd;
+        }
+        &:hover .page-footer__text,
+        &:focus .page-footer__text {
+            opacity: 0.6;
+        }
+        &:active .page-footer__text {
+            opacity: 0.3;
+        }
+    }
+    &__text {
+        font-weight: bold;
+        line-height: 38px;
+        text-align: middle;
+    }
+    &__img-dev {
+        margin-left: 30px;
+        width: 27px;
+        height: 34px;
+        fill: #63d1bb;
+    }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>mishka</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone-no">
+</head>
+
+<body>
+    <div class="sprites" style="display:none">
+        <include src="build/img/sprite.svg"></include>
+    </div>
+    <header class="page-header page-header--internal">
+        <div class="page-header__wrap page-header__wrap--top">
+            <a class="page-header__logo" href="index.html">
+                <picture class="page-header__logo-img">
+                    <source media="(max-width: 768px)" srcset="img/mishka-logo-mobile.svg">
+                    <source media="(max-width: 1200px)" srcset="img/mishka-logo-tablet.svg">
+                    <img src="img/mishka-logo-desktop.svg" alt="Логотип">
+                </picture>
+            </a>
+            <button class="main-nav__toggle main-nav__toggle--closed" type="button"><span class="hidden">Открыть
+                    меню</span></button>
+            <nav class="main-nav main-nav--top main-nav--internal">
+                <ul class="main-nav__list main-nav__list--top site-list">
+                    <li class="site-list__item">
+                        <a class="page-header__link" href="catalog.html">Каталог товаров</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a class="page-header__link" href="form.html">Вязание на заказ</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="page-header__search-box">
+                <a class="page-header__search" href="#">
+                    <svg class="page-header__search-img">
+                        <use xlink:href="#icon-search"></use>
+                    </svg>
+                    <div class="page-header__search-text">Поиск по сайту</div>
+                </a>
+            </div>
+            <div class="basket basket--internal">
+                <a class="basket__field" href="#">
+                    <svg class="basket__img">
+                        <use xlink:href="#icon-cart"></use>
+                    </svg>
+                    <div class="basket__text">Корзина: пока пуста</div>
+                </a>
+            </div>
+        </div>
+        <div class="page-header__wrap page-header__wrap--bottom page-header__wrap--internal">
+
+            <nav class="main-nav main-nav--bottom main-nav--internal">
+                <ul class="main-nav__list main-nav__list--bottom site-list">
+                    <a href="#">
+                        <li class="site-list__item site-list__item--bottom">
+                            Новые поступления
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="site-list__item site-list__item--bottom">
+                            Распродажа
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+            <p class="page-header__text page-header__text--internal">Бесплатная доставка по России</p>
+        </div>
+
+    </header>
+
+    <main class="page-main-internal">
+        <section class="catalog">
+            <h1 class="catalog__title">Каталог товаров</h1>
+            <div class="catalog__zigzag-img"></div>
+            <div class="catalog-card__wrapper" style="display: none">
+                <div class="catalog-card" id="card">
+                    <a class="catalog-card__field" href="#">
+                        <div class="catalog-card__img-wrap">
+                            <picture class="catalog-card__img">
+                                <source class="img-mobil-webp" type="image/webp" media="(max-width: 768px)" srcset="">
+                                <source class="img-tablet-webp" type="image/webp" media="(max-width: 1150px)" srcset="">
+                                <source class="img-desktop-webp" type="image/webp" srcset="">
+                                <source class="img-mobil" media="(max-width: 768px)" srcset="">
+                                <source class="img-tablet" media="(max-width: 1150px)" srcset="">
+                                <img class="img-descktop" src="" srcset="" alt="Элемент каталога">
+                            </picture>
+                        </div>
+                        <div class="catalog-card__text-wrap">
+                            <div class="catalog-card__text-descripthion">
+                                <p class="catalog-card__title">Название товара</p>
+                                <p class="catalog-card__text">Описание товара</p>
+                            </div>
+                            <p class="catalog-card__price">Цена товара.
+                                <svg class="catalog-card__icon">
+                                <use xlink:href="#icon-cart"></use>
+                            </svg>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="fabrication">
+                <div class="fabrication__field">
+                    <h1 class="hidden">Прозиводство товара</h1>
+                    <img class="fabrication__video" src="img/play.jpg" alt="">
+                    <div class="fabrication__wrap">
+                        <svg class="fabrication__icon-video">
+                            <use xlink:href="#icon-video"></use>
+                        </svg>
+                        <p class="fabrication__title">Процесс производства</p>
+                        <p class="fabrication__text">По просьбам наших любимых фолловеров мы сняли для вас подбробное видео о том, как появляются наши товары</p>
+                        <button class="fabrication__btn button" id="order">Сделать заказ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="page-footer page-footer--internal">
+        <div class="page-footer__column page-footer__column--left">
+            <a class="page-footer__logo" href="index.html">
+                <svg class="page-footer__logo-img">
+                    <use xlink:href="#icon-logo-footer"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="page-footer__column page-footer__column--middle">
+            <a class="page-footer__social-web-item" href="#">
+                <svg class="page-footer__social-img page-footer__social-img--inst">
+                    <use xlink:href="#icon-insta"></use>
+                </svg>
+            </a>
+            <a class="page-footer__social-web-item" href="#">
+                <svg class="page-footer__social-img page-footer__social-img--fb">
+                    <use xlink:href="#icon-fb"></use>
+                </svg>
+            </a>
+            <a class="page-footer__social-web-item" href="#">
+                <svg class="page-footer__social-img page-footer__social-img--tw">
+                    <use xlink:href="#icon-twitter"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="page-footer__column page-footer__column--right">
+            <a class="page-footer__developer">
+                <div class="page-footer__text">Разработано</div>
+                <svg class="page-footer__img-dev">
+                    <use xlink:href="#icon-htmlacademy"></use>
+                </svg>
+            </a>
+        </div>
+    </footer>
+    <div class="modal-wrapper ">
+    </div>
+    <div class="modal-window ">
+        <h2 class="modal-winow__title ">Добавить в корзину</h2>
+        <p class="modal-window__text ">выберите размер:</p>
+        <div class="modal-window__buttons ">
+            <div class="modal-window__btn-size button " data-id="1 "><span>S</span></div>
+            <div class="modal-window__btn-size button " data-id="2 "><span>M</span></div>
+            <div class="modal-window__btn-size button " data-id="3 "><span>L</span></div>
+        </div>
+        <a class="modal-window__btn button " type="button ">Добавить</a>
+    </div>
+
+    <script src="js/mishka.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+.basket {
+    width: 265px;
+    font-weight: bold;
+    text-align: right;
+    margin: auto 0;
+    margin-right: 75px;
+    @media (max-width: @desktop-width) {
+        margin-right: 60px;
+    }
+    @media (max-width: @tablet-width) {
+        display: none;
+    }
+    &--internal {
+        margin-right: 50px;
+    }
+    &__field {
+        display: flex;
+        flex-wrap: wrap;
+        cursor: pointer;
+        @media (max-width: @tablet-width) {
+            width: 100%;
+            min-width: 200px;
+            padding: 27px 0;
+            padding-left: 37%;
+            position: relative;
+        }
+    }
+    &__img {
+        fill: #d3d2d2;
+        width: 21px;
+        height: 18px;
+        padding: 0 30px;
+        margin: auto 0;
+        @media (max-width: @tablet-width) {
+            padding: 0;
+            margin-left: -50px;
+        }
+    }
+    &__field:hover .basket__text,
+    &__field:focus .basket__text {
+        opacity: 0.6;
+    }
+    &__field:active .basket__text {
+        opacity: 0.3;
+    }
+    &__field:hover .basket__img,
+    &__field:focus .basket__img {
+        fill: #63d1bb;
+    }
+    &__field:active .basket__img {
+        fill: #d0f1ea;
+    }
+    &__text {
+        margin: 27px 0;
+        @media (max-width: @desktop-width) {
+            margin: 31px 0;
+        }
+        @media (max-width: @tablet-width) {
+            margin: 0;
+            margin-left: 25px;
+            font-size: 17px;
+        }
+    }
+}
+
+/*Эксперементы*/
+
+.basket {
+    &--active {
+        @media (max-width: @tablet-width) {
+            display: flex;
+            justify-content: center;
+            order: 4;
+            margin: 0;
+            width: 100%;
+            max-width: 767px;
+            border-top: 2px solid #ececec;
+        }
+    }
+}
